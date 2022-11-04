@@ -38,4 +38,7 @@
 - Signup -> Escolher [Standard]
 - Datasets -> Create new dataset -> Athena -> Name [NomeDoDataSet] -> Create
 - Select database -> select table -> Edit or preview -> Save & visualize
-- Criar visualizações selecionando colunas, criando filtros e parâmetros e selecionando Visual types para gráficos. (disponivel o DashBoard Criado pelo link: https://sa-east-1.quicksight.aws.amazon.com/sn/dashboards/eb46defc-e035-4b56-9990-44397dc0cbb3/views/da1ebbc3-68e1-4164-8dfb-1c80dcc19fd6 ) 
+- Criar visualizações selecionando colunas, criando filtros e parâmetros e selecionando Visual types para gráficos. (
+
+## DashBoard Criado disponivel pelo link: https://sa-east-1.quicksight.aws.amazon.com/sn/dashboards/eb46defc-e035-4b56-9990-44397dc0cbb3/views/da1ebbc3-68e1-4164-8dfb-1c80dcc19fd6 ) 
+## Todas as queries utilizadas estão disponiveis na pasta queries
