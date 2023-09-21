@@ -1,44 +1,44 @@
-# Explorando Dados Demográficos com Serviços de Big Data na AWS
+# Exploring Demographic Data with Big Data Services on AWS
 
-### Serviços utilizados nessa atividade prática
+### Services Used in this Practical Activity
  - Amazon S3
  - Amazon Glue
  - Amazon Athena
  - Amazon QuickSight
 
-## Etapas para desenvolvimento
+## Development Steps
 
-### Criar bucket no Amazon S3
+### Create a Bucket in Amazon S3
 
-- Amazon S3 Console -> Buckets -> Create bucket -> Bucket name [nome_do bucket] - Create bucket
-- Create folder (Criar uma pasta chamada ```/output``` e outra com o nome do seu conjunto de dados. Este nome irá definir o nome da tabela criada no Glue)
-- Upload dos arquivos de dados
+- Amazon S3 Console -> Buckets -> Create bucket -> Bucket name [bucket_name] - Create bucket
+- Create a folder (Create a folder named ```/output``` and another with the name of your dataset. This name will define the table name created in Glue)
+- Upload the data files
 
-### Criar Glue Crawler
+### Create a Glue Crawler
 
 - Amazon Glue Console -> Crawlers -> Add Crawler
 - Source type [Data Stores] -> Crawl all folders
-- Data store [S3] -> Include path [caminho do diretório dos dados de entrada]
+- Data store [S3] -> Include path [path_to_input_data_directory]
 - Create IAM Role
 - Frequency [Run on demand]
-- Database name [seu_nome_de_db]
+- Database name [your_db_name]
 - Group behavior [Create a single schema for each S3 path]
 - Finish
-- Databases -> Tables -> Visualizar dados das tabelas criadas
+- Databases -> Tables -> View data of the created tables
 
-### Criar aplicação no Amazon Athena
+### Create an Application in Amazon Athena
 
-- Query editor -> Settings -> Manage settings -> Query result location and encryption -> Browse S3 -> selecionar o bucket criado
-- Selecionar Database -> criar queries (queries disponiveis na pasta de queries)
-- Verificar queries não salvas no bucket criado no S3
-- Salavar queries -> Executar novamente -> Verificar no bucket criado no S3
+- Query editor -> Settings -> Manage settings -> Query result location and encryption -> Browse S3 -> select the created bucket
+- Select Database -> create queries (queries available in the queries folder)
+- Check unsaved queries in the bucket created in S3
+- Save queries -> Run again -> Check in the bucket created in S3
 
-### Visualizar dados no Amazon QuickSight
+### Visualize Data in Amazon QuickSight
 
-- Signup -> Escolher [Standard]
-- Datasets -> Create new dataset -> Athena -> Name [NomeDoDataSet] -> Create
+- Signup -> Choose [Standard]
+- Datasets -> Create a new dataset -> Athena -> Name [DatasetName] -> Create
 - Select database -> select table -> Edit or preview -> Save & visualize
-- Criar visualizações selecionando colunas, criando filtros e parâmetros e selecionando Visual types para gráficos. (
+- Create visualizations by selecting columns, creating filters and parameters, and choosing Visual types for charts.
 
-## DashBoard Criado disponivel pelo link: https://sa-east-1.quicksight.aws.amazon.com/sn/dashboards/eb46defc-e035-4b56-9990-44397dc0cbb3/views/da1ebbc3-68e1-4164-8dfb-1c80dcc19fd6 ) 
-## Todas as queries utilizadas estão disponiveis na pasta queries
+## Dashboard Created available at the link: [Dashboard Link](https://sa-east-1.quicksight.aws.amazon.com/sn/dashboards/eb46defc-e035-4b56-9990-44397dc0cbb3/views/da1ebbc3-68e1-4164-8dfb-1c80dcc19fd6)
+## All queries used are available in the queries folder
